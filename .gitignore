@@ -1,0 +1,12 @@
+## Visual Studio và Build Output
+.vs/
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+## Các file tạm của hệ thống
+Thumbs.db
+Desktop.ini
