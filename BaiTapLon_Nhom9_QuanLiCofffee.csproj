@@ -72,7 +72,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-<<<<<<< HEAD
     <Compile Include="ThemDoUongcs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,9 +83,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ThemDoUongDataSet.xsd</DependentUpon>
     </Compile>
-=======
     <Compile Include="ThemeColor.cs" />
->>>>>>> c35df7abcec9a75750427f411e5ba1d26e47f376
     <Compile Include="ThemPhieu.cs">
       <SubType>Form</SubType>
     </Compile>
