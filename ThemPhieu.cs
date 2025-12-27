@@ -15,10 +15,8 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
 {
     public partial class ThemPhieu : Form
     {
-        string connectionString =
-                                   @"Data Source=LAPTOP-F3O4C3L0\SQLVANHIEU;
-                                   Initial Catalog=ThemPhieu;
-                                   Integrated Security=True";
+        string connectionString = @"Data Source=LAPTOP-QUBRA9KU\SQLEXPRESS;Initial Catalog=QuanLyQuanCafe;Integrated Security=True;TrustServerCertificate=True";
+
 
         SqlConnection sqlCon = null;
         ErrorProvider errorProvider = new ErrorProvider();

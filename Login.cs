@@ -24,64 +24,97 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
+            string tk = txtTenDangNhap.Text.Trim();
+            string mk = txtMatKhau.Text.Trim();
+
+            if (string.IsNullOrEmpty(tk) || string.IsNullOrEmpty(mk))
+            {
+                MessageBox.Show("Vui lòng nhập đầy đủ tên đăng nhập và mật khẩu!");
+                return;
+            }
+
             using (SqlConnection connection = new SqlConnection(str))
             {
                 try
                 {
                     connection.Open();
 
-                    string sql = @"SELECT MaNV, HoTen, ChucVu 
-                                   FROM NhanVien 
-                                   WHERE TenDangNhap = @tk AND MatKhau = @mk";
+                    /* ================== 1. KIỂM TRA QUẢN LÝ ================== */
+                    string sqlQuanLy = @"SELECT MaQL, HoTen 
+                                 FROM QuanLy
+                                 WHERE TenDangNhap = @tk AND MatKhau = @mk";
 
-                    using (SqlCommand command = new SqlCommand(sql, connection))
+                    using (SqlCommand cmdQL = new SqlCommand(sqlQuanLy, connection))
                     {
-                        command.Parameters.AddWithValue("@tk", txtTenDangNhap.Text.Trim());
-                        command.Parameters.AddWithValue("@mk", txtMatKhau.Text.Trim());
+                        cmdQL.Parameters.AddWithValue("@tk", tk);
+                        cmdQL.Parameters.AddWithValue("@mk", mk);
 
-                        SqlDataReader reader = command.ExecuteReader();
-
-                        if (reader.Read())
+                        using (SqlDataReader readerQL = cmdQL.ExecuteReader())
                         {
-                            string maNV = reader["MaNV"].ToString();
-                            string hoTen = reader["HoTen"].ToString();
-                            string chucVu = reader["ChucVu"].ToString();
-
-                            MessageBox.Show(
-                                $"Đăng nhập thành công!\nNhân viên: {hoTen}\nChức vụ: {chucVu}",
-                                "Thông báo",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information
-                            );
-
-                            this.Hide();
-
-                            // Phân quyền
-                            if (chucVu == "QuanLy")
+                            if (readerQL.Read())
                             {
-                                ManHinhQuanLy frm = new ManHinhQuanLy(maNV);
+                                string maQL = readerQL["MaQL"].ToString();
+                                string hoTen = readerQL["HoTen"].ToString();
+
+                                MessageBox.Show(
+                                    $"Đăng nhập thành công!\nQuản lý: {hoTen}",
+                                    "Thông báo",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information
+                                );
+
+                                this.Hide();
+                                ManHinhQuanLy frm = new ManHinhQuanLy(maQL);
                                 frm.Show();
+                                return; // THOÁT HÀM – không kiểm tra nhân viên nữa
                             }
-                            else
-                            {
-                                
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show(
-                                "Sai tên đăng nhập hoặc mật khẩu!",
-                                "Lỗi",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Error
-                            );
                         }
                     }
+
+                    /* ================== 2. KIỂM TRA NHÂN VIÊN ================== */
+                    string sqlNhanVien = @"SELECT MaNV, HoTen 
+                                   FROM NhanVien
+                                   WHERE TenDangNhap = @tk AND MatKhau = @mk";
+
+                    using (SqlCommand cmdNV = new SqlCommand(sqlNhanVien, connection))
+                    {
+                        cmdNV.Parameters.AddWithValue("@tk", tk);
+                        cmdNV.Parameters.AddWithValue("@mk", mk);
+
+                        using (SqlDataReader readerNV = cmdNV.ExecuteReader())
+                        {
+                            if (readerNV.Read())
+                            {
+                                string maNV = readerNV["MaNV"].ToString();
+                                string hoTen = readerNV["HoTen"].ToString();
+
+                                MessageBox.Show(
+                                    $"Đăng nhập thành công!\nNhân viên: {hoTen}",
+                                    "Thông báo",
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information
+                                );
+
+                                this.Hide();
+                              
+                                
+                                return;
+                            }
+                        }
+                    }
+
+                    /* ================== 3. ĐĂNG NHẬP THẤT BẠI ================== */
+                    MessageBox.Show(
+                        "Sai tên đăng nhập hoặc mật khẩu!",
+                        "Đăng nhập thất bại",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error
+                    );
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show(
-                        "Lỗi kết nối CSDL: " + ex.Message,
+                        "Lỗi hệ thống: " + ex.Message,
                         "Warning",
                         MessageBoxButtons.OK,
                         MessageBoxIcon.Warning
@@ -90,9 +123,15 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
             }
         }
 
+
         private void button1_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

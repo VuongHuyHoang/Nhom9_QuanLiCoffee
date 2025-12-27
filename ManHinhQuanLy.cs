@@ -239,6 +239,11 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
             OpenChildForm(dSPhieuNhap);
         }
 
+        private void lbName_Click(object sender, EventArgs e)
+        {
+
+        }
+
 
 
 

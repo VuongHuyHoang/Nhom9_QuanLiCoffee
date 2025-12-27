@@ -57,9 +57,9 @@
             this.btnQuanLyHoaDon = new System.Windows.Forms.Button();
             this.pnBangChamCong = new System.Windows.Forms.Panel();
             this.btnBangChamCong = new System.Windows.Forms.Button();
-            this.pnBody = new System.Windows.Forms.Panel();
             this.pnLapPheuNhap = new System.Windows.Forms.Panel();
             this.btnLapPhieuNhap = new System.Windows.Forms.Button();
+            this.pnBody = new System.Windows.Forms.Panel();
             this.pnBaocao.SuspendLayout();
             this.CaiDatContainer.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -228,6 +228,7 @@
             this.lbName.TabIndex = 1;
             this.lbName.Text = "~~WELCOME~~";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbName.Click += new System.EventHandler(this.lbName_Click);
             // 
             // CaiDatTimer
             // 
@@ -432,17 +433,6 @@
             this.btnBangChamCong.UseVisualStyleBackColor = false;
             this.btnBangChamCong.Click += new System.EventHandler(this.btnBangChamCong_Click);
             // 
-            // pnBody
-            // 
-            this.pnBody.BackColor = System.Drawing.Color.White;
-            this.pnBody.Location = new System.Drawing.Point(60, 92);
-            this.pnBody.Margin = new System.Windows.Forms.Padding(0);
-            this.pnBody.MaximumSize = new System.Drawing.Size(1249, 544);
-            this.pnBody.MinimumSize = new System.Drawing.Size(1113, 532);
-            this.pnBody.Name = "pnBody";
-            this.pnBody.Size = new System.Drawing.Size(1239, 532);
-            this.pnBody.TabIndex = 7;
-            // 
             // pnLapPheuNhap
             // 
             this.pnLapPheuNhap.Controls.Add(this.btnLapPhieuNhap);
@@ -469,6 +459,18 @@
             this.btnLapPhieuNhap.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLapPhieuNhap.UseVisualStyleBackColor = false;
             this.btnLapPhieuNhap.Click += new System.EventHandler(this.btnLapPhieuNhap_Click);
+            // 
+            // pnBody
+            // 
+            this.pnBody.AutoSize = true;
+            this.pnBody.BackColor = System.Drawing.Color.White;
+            this.pnBody.Location = new System.Drawing.Point(40, 100);
+            this.pnBody.Margin = new System.Windows.Forms.Padding(0);
+            this.pnBody.MaximumSize = new System.Drawing.Size(1249, 544);
+            this.pnBody.MinimumSize = new System.Drawing.Size(1113, 505);
+            this.pnBody.Name = "pnBody";
+            this.pnBody.Size = new System.Drawing.Size(1231, 505);
+            this.pnBody.TabIndex = 7;
             // 
             // ManHinhQuanLy
             // 
@@ -510,6 +512,7 @@
             this.pnLapPheuNhap.ResumeLayout(false);
             this.pnLapPheuNhap.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
