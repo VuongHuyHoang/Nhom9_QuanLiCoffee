@@ -58,8 +58,21 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManHinhQuanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManHinhQuanLy.Designer.cs">
+      <DependentUpon>ManHinhQuanLy.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="ThemDoUongcs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +84,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ThemDoUongDataSet.xsd</DependentUpon>
     </Compile>
+=======
+    <Compile Include="ThemeColor.cs" />
+>>>>>>> c35df7abcec9a75750427f411e5ba1d26e47f376
     <Compile Include="ThemPhieu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -88,6 +104,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManHinhQuanLy.resx">
+      <DependentUpon>ManHinhQuanLy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
