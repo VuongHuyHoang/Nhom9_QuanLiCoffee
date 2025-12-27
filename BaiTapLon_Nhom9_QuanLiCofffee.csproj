@@ -60,6 +60,17 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ThemDoUongcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ThemDoUongcs.Designer.cs">
+      <DependentUpon>ThemDoUongcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ThemDoUongDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ThemDoUongDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ThemPhieu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +98,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ThemDoUongcs.resx">
+      <DependentUpon>ThemDoUongcs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThemPhieu.resx">
       <DependentUpon>ThemPhieu.cs</DependentUpon>
     </EmbeddedResource>
@@ -102,6 +116,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="ThemDoUongDataSet.xsc">
+      <DependentUpon>ThemDoUongDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="ThemDoUongDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ThemDoUongDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="ThemDoUongDataSet.xss">
+      <DependentUpon>ThemDoUongDataSet.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
