@@ -15,10 +15,8 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
 {
     public partial class ThemPhieu : Form
     {
-        string connectionString =
-                                   @"Data Source=LAPTOP-F3O4C3L0\SQLVANHIEU;
-                                   Initial Catalog=ThemPhieu;
-                                   Integrated Security=True";
+        string connectionString = @"Data Source=LAPTOP-QUBRA9KU\SQLEXPRESS;Initial Catalog=QuanLyQuanCafe;Integrated Security=True;TrustServerCertificate=True";
+
 
         SqlConnection sqlCon = null;
         ErrorProvider errorProvider = new ErrorProvider();
@@ -42,12 +40,13 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
                 sqlCon.Open();
 
                 // Load Quản lý
-                SqlDataAdapter daQL = new SqlDataAdapter("SELECT MaQL, TenQL FROM QuanLy", sqlCon);
+                SqlDataAdapter daQL = new SqlDataAdapter("SELECT MaQL, HoTen, TenDangNhap, MatKhau, SDT FROM QuanLy", sqlCon);
                 DataTable dtQL = new DataTable();
                 daQL.Fill(dtQL);
                 cboQuanLy.DataSource = dtQL;
-                cboQuanLy.DisplayMember = "TenQL";
+                cboQuanLy.DisplayMember = "HoTen";
                 cboQuanLy.ValueMember = "MaQL";
+                
 
                 // Load Nguyên liệu
                 SqlDataAdapter daNL = new SqlDataAdapter("SELECT MaNL, TenNL FROM NguyenLieu", sqlCon);
@@ -56,6 +55,7 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
                 cboNguyenLieu.DataSource = dtNL;
                 cboNguyenLieu.DisplayMember = "TenNL";
                 cboNguyenLieu.ValueMember = "MaNL";
+               
             }
         }
         private bool KiemTraDuLieu()
@@ -167,7 +167,7 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
                 try
                 {
                     // 2. Lưu vào bảng PhieuNhap
-                    string queryPhieu = "INSERT INTO PhieuNhap (MaPN, NgayNhap, MaQL, TongTien) VALUES (@MaPN, @NgayNhap, @MaQL, @TongTien)";
+                    string queryPhieu = "INSERT INTO PhieuNhap (MaPhieu, NgayNhap, MaQL, TongTienNhap) VALUES (@MaPN, @NgayNhap, @MaQL, @TongTien)";
                     SqlCommand cmdPhieu = new SqlCommand(queryPhieu, sqlCon, transaction);
                     cmdPhieu.Parameters.AddWithValue("@MaPN", txtMaPhieu.Text);
                     cmdPhieu.Parameters.AddWithValue("@NgayNhap", dtpNgayNhap.Value);
@@ -182,13 +182,13 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
                     {
                         if (row.IsNewRow) continue;
 
-                        string queryCT = "INSERT INTO ChiTietPhieuNhap (MaPN, MaNL, SoLuong, DonGia, ThanhTien) VALUES (@MaPN, @MaNL, @SoLuong, @DonGia, @ThanhTien)";
+                        string queryCT = "INSERT INTO ChiTietPhieuNhap (MaPhieu, MaNL, SoLuongNhap, GiaNhap) VALUES (@MaPN, @MaNL, @SoLuong, @DonGia)";
                         SqlCommand cmdCT = new SqlCommand(queryCT, sqlCon, transaction);
                         cmdCT.Parameters.AddWithValue("@MaPN", txtMaPhieu.Text);
                         cmdCT.Parameters.AddWithValue("@MaNL", row.Cells["MaNL"].Value);
                         cmdCT.Parameters.AddWithValue("@SoLuong", row.Cells["SoLuong"].Value);
-                        cmdCT.Parameters.AddWithValue("@DonGia", row.Cells["DonGia"].Value);
-                        cmdCT.Parameters.AddWithValue("@ThanhTien", row.Cells["ThanhTien"].Value);
+                        cmdCT.Parameters.AddWithValue("@DonGia", row.Cells["ThanhTien"].Value);
+                       
 
                         cmdCT.ExecuteNonQuery();
                     }

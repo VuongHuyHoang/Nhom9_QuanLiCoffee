@@ -14,10 +14,8 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
 {
     public partial class DSPhieuNhap : Form
     {
-        string connectionString =
-                                  @"Data Source=LAPTOP-F3O4C3L0\SQLVANHIEU;
-                                   Initial Catalog=ThemPhieu;
-                                   Integrated Security=True";
+        string connectionString = @"Data Source=LAPTOP-QUBRA9KU\SQLEXPRESS;Initial Catalog=QuanLyQuanCafe;Integrated Security=True;TrustServerCertificate=True";
+
         public DSPhieuNhap()
         {
             InitializeComponent();
@@ -25,7 +23,7 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
 
         private void DSPhieuNhap_Load(object sender, EventArgs e)
         {
-            //LoadDanhSachPhieu();
+            LoadDanhSachPhieu();
         }
         private void LoadDanhSachPhieu()
         {
@@ -33,14 +31,18 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
             {
                 using (SqlConnection sqlCon = new SqlConnection(connectionString))
                 {
-                    // Truy vấn kết hợp với bảng QuanLy để lấy tên người quản lý
-                    string query = @"SELECT p.MaPN as 'Mã Phiếu', 
-                                            p.NgayNhap as 'Ngày Nhập', 
-                                            q.TenQL as 'Người Quản Lý', 
-                                            p.TongTien as 'Tổng Tiền' 
-                                     FROM PhieuNhap p
-                                     JOIN QuanLy q ON p.MaQL = q.MaQL
-                                     ORDER BY p.NgayNhap DESC";
+                    // Mở kết nối trước khi fill (tốt cho hiệu suất)
+                    if (sqlCon.State == ConnectionState.Closed) sqlCon.Open();
+
+                    // Truy vấn khớp với tên bảng QuanLy và PhieuNhap bạn đã tạo
+                    // Sử dụng N'...' cho các bí danh có dấu để tránh lỗi font hệ thống
+                    string query = @"SELECT p.MaPhieu AS [Mã Phiếu], 
+                                    p.NgayNhap AS [Ngày Nhập], 
+                                    q.HoTen AS [Người Quản Lý], 
+                                    p.TongTienNhap AS [Tổng Tiền] 
+                             FROM PhieuNhap p
+                             INNER JOIN QuanLy q ON p.MaQL = q.MaQL
+                             ORDER BY p.NgayNhap DESC";
 
                     SqlDataAdapter da = new SqlDataAdapter(query, sqlCon);
                     DataTable dt = new DataTable();
@@ -48,14 +50,28 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
 
                     dgvDanhSach.DataSource = dt;
 
-                    // Định dạng hiển thị tiền tệ cho cột Tổng Tiền
-                    dgvDanhSach.Columns["Tổng Tiền"].DefaultCellStyle.Format = "N0";
+                    // Kiểm tra cột tồn tại trước khi định dạng để tránh lỗi Runtime
+                    if (dgvDanhSach.Columns.Contains("Tổng Tiền"))
+                    {
+                        // "N0" phù hợp với DECIMAL(18,0) vì nó sẽ phân cách hàng nghìn và không lấy số lẻ
+                        dgvDanhSach.Columns["Tổng Tiền"].DefaultCellStyle.Format = "N0";
+                        dgvDanhSach.Columns["Tổng Tiền"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                    }
+
+                    // Định dạng ngày tháng cho cột Ngày Nhập
+                    if (dgvDanhSach.Columns.Contains("Ngày Nhập"))
+                    {
+                        dgvDanhSach.Columns["Ngày Nhập"].DefaultCellStyle.Format = "dd/MM/yyyy HH:mm";
+                    }
+
                     dgvDanhSach.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dgvDanhSach.ReadOnly = true; // Chỉ xem danh sách
+                    dgvDanhSach.AllowUserToAddRows = false; // Tắt dòng trống cuối cùng
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Lỗi kết nối: " + ex.Message);
+                MessageBox.Show("Lỗi tải danh sách phiếu: " + ex.Message, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

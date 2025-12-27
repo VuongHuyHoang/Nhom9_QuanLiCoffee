@@ -232,6 +232,7 @@
             this.lbName.TabIndex = 1;
             this.lbName.Text = "~~WELCOME~~";
             this.lbName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lbName.Click += new System.EventHandler(this.lbName_Click);
             // 
             // CaiDatTimer
             // 
@@ -522,6 +523,7 @@
             this.pnLapPheuNhap.ResumeLayout(false);
             this.pnLapPheuNhap.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

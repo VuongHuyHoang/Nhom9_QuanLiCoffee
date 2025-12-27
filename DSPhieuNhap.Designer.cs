@@ -37,27 +37,31 @@
             // dgvDanhSach
             // 
             this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDanhSach.Location = new System.Drawing.Point(31, 41);
+            this.dgvDanhSach.Dock = System.Windows.Forms.DockStyle.Top;
+            this.dgvDanhSach.Location = new System.Drawing.Point(0, 0);
+            this.dgvDanhSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvDanhSach.Name = "dgvDanhSach";
             this.dgvDanhSach.RowHeadersWidth = 51;
             this.dgvDanhSach.RowTemplate.Height = 24;
-            this.dgvDanhSach.Size = new System.Drawing.Size(630, 479);
+            this.dgvDanhSach.Size = new System.Drawing.Size(662, 389);
             this.dgvDanhSach.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 9);
+            this.label1.Location = new System.Drawing.Point(24, 401);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(140, 16);
+            this.label1.Size = new System.Drawing.Size(115, 13);
             this.label1.TabIndex = 1;
             this.label1.Text = "Danh sách phiếu nhập";
             // 
             // btnThemPhieu
             // 
-            this.btnThemPhieu.Location = new System.Drawing.Point(667, 483);
+            this.btnThemPhieu.Location = new System.Drawing.Point(513, 392);
+            this.btnThemPhieu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThemPhieu.Name = "btnThemPhieu";
-            this.btnThemPhieu.Size = new System.Drawing.Size(132, 37);
+            this.btnThemPhieu.Size = new System.Drawing.Size(99, 30);
             this.btnThemPhieu.TabIndex = 2;
             this.btnThemPhieu.Text = "Thêm phiếu nhập";
             this.btnThemPhieu.UseVisualStyleBackColor = true;
@@ -65,12 +69,14 @@
             // 
             // DSPhieuNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(883, 532);
+            this.ClientSize = new System.Drawing.Size(662, 432);
             this.Controls.Add(this.btnThemPhieu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvDanhSach);
+            this.Cursor = System.Windows.Forms.Cursors.Default;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "DSPhieuNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DSPhieuNhap";
