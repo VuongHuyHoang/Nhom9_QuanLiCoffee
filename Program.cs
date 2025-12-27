@@ -17,11 +17,10 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 <<<<<<< HEAD
-            Application.Run(new ManHinhQuanLy("NV001"));
+            Application.Run(new ThemDoUongcs());
 =======
-            Application.Run(new ThongKe());
-
->>>>>>> thongke
+            Application.Run(new ManHinhQuanLy("NV001"));
+>>>>>>> c35df7abcec9a75750427f411e5ba1d26e47f376
         }
     }
 }
