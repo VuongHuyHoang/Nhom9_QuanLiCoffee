@@ -16,7 +16,12 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
+<<<<<<< HEAD
             Application.Run(new ManHinhQuanLy("NV001"));
+=======
+            Application.Run(new ThongKe());
+
+>>>>>>> thongke
         }
     }
 }
