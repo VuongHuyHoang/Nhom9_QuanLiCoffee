@@ -58,6 +58,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Quanlydouong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Quanlydouong.Designer.cs">
+      <DependentUpon>Quanlydouong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tracuu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tracuu.Designer.cs">
+      <DependentUpon>Tracuu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -117,14 +129,17 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="ThemDoUongcs.resx">
-      <DependentUpon>ThemDoUongcs.cs</DependentUpon>
+    <EmbeddedResource Include="Quanlydouong.resx">
+      <DependentUpon>Quanlydouong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThemPhieu.resx">
       <DependentUpon>ThemPhieu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ThongKe.resx">
       <DependentUpon>ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tracuu.resx">
+      <DependentUpon>Tracuu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

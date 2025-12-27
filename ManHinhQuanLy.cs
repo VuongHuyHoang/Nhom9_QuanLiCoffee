@@ -197,6 +197,7 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
         {
             ActiveButton(sender);
             lbName.Text = btnQuanLyThucUong.Text;
+            OpenChildForm(new Tracuu());
         }
 
         private void btnQuanLyCaLam_Click(object sender, EventArgs e)
@@ -238,8 +239,8 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
             DSPhieuNhap dSPhieuNhap = new DSPhieuNhap();
             OpenChildForm(dSPhieuNhap);
         }
-
-
+     
+       
 
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////end
