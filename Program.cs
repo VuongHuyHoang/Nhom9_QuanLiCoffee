@@ -21,6 +21,8 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
 
             Application.Run(new ThongKe());
 
+            //Application.Run(new ThemDoUongcs());
+            //Application.Run(new ManHinhQuanLy("NV001"));
 
         }
     }
