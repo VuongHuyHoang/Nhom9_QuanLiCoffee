@@ -17,12 +17,15 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
+
             // Application.Run(new ManHinhQuanLy("NV001"));
 
             Application.Run(new ThongKe());
 
             //Application.Run(new ThemDoUongcs());
             //Application.Run(new ManHinhQuanLy("NV001"));
+
+            Application.Run(new DSPhieuNhap());
 
         }
     }
