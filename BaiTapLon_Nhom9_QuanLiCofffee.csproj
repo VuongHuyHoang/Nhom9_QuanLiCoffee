@@ -78,11 +78,6 @@
     <Compile Include="ThemDoUongcs.Designer.cs">
       <DependentUpon>ThemDoUongcs.cs</DependentUpon>
     </Compile>
-    <Compile Include="ThemDoUongDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ThemDoUongDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="ThemeColor.cs" />
     <Compile Include="ThemPhieu.cs">
       <SubType>Form</SubType>
@@ -135,17 +130,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="ThemDoUongDataSet.xsc">
-      <DependentUpon>ThemDoUongDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="ThemDoUongDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>ThemDoUongDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="ThemDoUongDataSet.xss">
-      <DependentUpon>ThemDoUongDataSet.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

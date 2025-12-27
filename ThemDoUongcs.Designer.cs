@@ -32,6 +32,7 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.doUongBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel4 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -39,7 +40,8 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.label4 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cboDanhMuc = new System.Windows.Forms.ComboBox();
+            this.danhMucBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -56,32 +58,20 @@
             this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.themDoUongDataSet = new BaiTapLon_Nhom9_QuanLiCofffee.ThemDoUongDataSet();
-            this.doUongBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.doUongTableAdapter = new BaiTapLon_Nhom9_QuanLiCofffee.ThemDoUongDataSetTableAdapters.DoUongTableAdapter();
-            this.tableAdapterManager = new BaiTapLon_Nhom9_QuanLiCofffee.ThemDoUongDataSetTableAdapters.TableAdapterManager();
-            this.maDoUongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenDoUongDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.donGiaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maDanhMucDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.hinhAnhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.danhMucBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.danhMucTableAdapter = new BaiTapLon_Nhom9_QuanLiCofffee.ThemDoUongDataSetTableAdapters.DanhMucTableAdapter();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doUongBindingSource)).BeginInit();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource)).BeginInit();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel9.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.themDoUongDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doUongBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -113,20 +103,20 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.maDoUongDataGridViewTextBoxColumn,
-            this.tenDoUongDataGridViewTextBoxColumn,
-            this.donGiaDataGridViewTextBoxColumn,
-            this.maDanhMucDataGridViewTextBoxColumn,
-            this.hinhAnhDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.doUongBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(6, 73);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(583, 406);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // doUongBindingSource
+            // 
+            this.doUongBindingSource.DataMember = "DoUong";
             // 
             // panel4
             // 
@@ -143,16 +133,18 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(389, 311);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(50)))), ((int)(((byte)(0)))));
+            this.button1.Location = new System.Drawing.Point(392, 285);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(87, 43);
             this.button1.TabIndex = 6;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Text = "Chọn Ảnh";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(3, 255);
+            this.pictureBox1.Location = new System.Drawing.Point(7, 251);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(353, 142);
             this.pictureBox1.TabIndex = 5;
@@ -169,7 +161,12 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(195, 24);
+            this.numericUpDown1.Location = new System.Drawing.Point(192, 24);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            1215752192,
+            23,
+            0,
+            0});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(314, 22);
             this.numericUpDown1.TabIndex = 1;
@@ -186,24 +183,29 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.comboBox1);
+            this.panel7.Controls.Add(this.cboDanhMuc);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Location = new System.Drawing.Point(0, 129);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(512, 57);
             this.panel7.TabIndex = 3;
             // 
-            // comboBox1
+            // cboDanhMuc
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.Silver;
-            this.comboBox1.DataSource = this.danhMucBindingSource;
-            this.comboBox1.DisplayMember = "TenDanhMuc";
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(195, 19);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(314, 24);
-            this.comboBox1.TabIndex = 1;
-            this.comboBox1.ValueMember = "MaDanhMuc";
+            this.cboDanhMuc.BackColor = System.Drawing.Color.Silver;
+            this.cboDanhMuc.DataSource = this.danhMucBindingSource;
+            this.cboDanhMuc.DisplayMember = "TenDanhMuc";
+            this.cboDanhMuc.FormattingEnabled = true;
+            this.cboDanhMuc.Location = new System.Drawing.Point(195, 19);
+            this.cboDanhMuc.Name = "cboDanhMuc";
+            this.cboDanhMuc.Size = new System.Drawing.Size(314, 24);
+            this.cboDanhMuc.TabIndex = 1;
+            this.cboDanhMuc.ValueMember = "MaDanhMuc";
+            this.cboDanhMuc.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // danhMucBindingSource
+            // 
+            this.danhMucBindingSource.DataMember = "DanhMuc";
             // 
             // label3
             // 
@@ -317,6 +319,7 @@
             this.button6.TabIndex = 0;
             this.button6.Text = "Thêm";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button7
             // 
@@ -337,6 +340,7 @@
             this.button8.TabIndex = 1;
             this.button8.Text = "Sửa";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button9
             // 
@@ -347,81 +351,17 @@
             this.button9.TabIndex = 2;
             this.button9.Text = "Xóa";
             this.button9.UseVisualStyleBackColor = false;
+            this.button9.Click += new System.EventHandler(this.button9_Click);
             // 
             // tabPage2
             // 
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(933, 482);
+            this.tabPage2.Size = new System.Drawing.Size(1116, 482);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
-            // 
-            // themDoUongDataSet
-            // 
-            this.themDoUongDataSet.DataSetName = "ThemDoUongDataSet";
-            this.themDoUongDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // doUongBindingSource
-            // 
-            this.doUongBindingSource.DataMember = "DoUong";
-            this.doUongBindingSource.DataSource = this.themDoUongDataSet;
-            // 
-            // doUongTableAdapter
-            // 
-            this.doUongTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.DanhMucTableAdapter = this.danhMucTableAdapter;
-            this.tableAdapterManager.DoUongTableAdapter = this.doUongTableAdapter;
-            this.tableAdapterManager.UpdateOrder = BaiTapLon_Nhom9_QuanLiCofffee.ThemDoUongDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            // 
-            // maDoUongDataGridViewTextBoxColumn
-            // 
-            this.maDoUongDataGridViewTextBoxColumn.DataPropertyName = "MaDoUong";
-            this.maDoUongDataGridViewTextBoxColumn.HeaderText = "MaDoUong";
-            this.maDoUongDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.maDoUongDataGridViewTextBoxColumn.Name = "maDoUongDataGridViewTextBoxColumn";
-            // 
-            // tenDoUongDataGridViewTextBoxColumn
-            // 
-            this.tenDoUongDataGridViewTextBoxColumn.DataPropertyName = "TenDoUong";
-            this.tenDoUongDataGridViewTextBoxColumn.HeaderText = "TenDoUong";
-            this.tenDoUongDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.tenDoUongDataGridViewTextBoxColumn.Name = "tenDoUongDataGridViewTextBoxColumn";
-            // 
-            // donGiaDataGridViewTextBoxColumn
-            // 
-            this.donGiaDataGridViewTextBoxColumn.DataPropertyName = "DonGia";
-            this.donGiaDataGridViewTextBoxColumn.HeaderText = "DonGia";
-            this.donGiaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.donGiaDataGridViewTextBoxColumn.Name = "donGiaDataGridViewTextBoxColumn";
-            // 
-            // maDanhMucDataGridViewTextBoxColumn
-            // 
-            this.maDanhMucDataGridViewTextBoxColumn.DataPropertyName = "MaDanhMuc";
-            this.maDanhMucDataGridViewTextBoxColumn.HeaderText = "MaDanhMuc";
-            this.maDanhMucDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.maDanhMucDataGridViewTextBoxColumn.Name = "maDanhMucDataGridViewTextBoxColumn";
-            // 
-            // hinhAnhDataGridViewTextBoxColumn
-            // 
-            this.hinhAnhDataGridViewTextBoxColumn.DataPropertyName = "HinhAnh";
-            this.hinhAnhDataGridViewTextBoxColumn.HeaderText = "HinhAnh";
-            this.hinhAnhDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.hinhAnhDataGridViewTextBoxColumn.Name = "hinhAnhDataGridViewTextBoxColumn";
-            // 
-            // danhMucBindingSource
-            // 
-            this.danhMucBindingSource.DataMember = "DanhMuc";
-            this.danhMucBindingSource.DataSource = this.themDoUongDataSet;
-            // 
-            // danhMucTableAdapter
-            // 
-            this.danhMucTableAdapter.ClearBeforeFill = true;
             // 
             // ThemDoUongcs
             // 
@@ -435,6 +375,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.doUongBindingSource)).EndInit();
             this.panel4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel8.ResumeLayout(false);
@@ -442,6 +383,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource)).EndInit();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
@@ -449,9 +391,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel9.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.themDoUongDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.doUongBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -465,7 +404,7 @@
         private System.Windows.Forms.NumericUpDown numericUpDown1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cboDanhMuc;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.TextBox textBox3;
@@ -485,16 +424,16 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private ThemDoUongDataSet themDoUongDataSet;
+       
         private System.Windows.Forms.BindingSource doUongBindingSource;
-        private ThemDoUongDataSetTableAdapters.DoUongTableAdapter doUongTableAdapter;
-        private ThemDoUongDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+   
+     
         private System.Windows.Forms.DataGridViewTextBoxColumn maDoUongDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tenDoUongDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn donGiaDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn maDanhMucDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn hinhAnhDataGridViewTextBoxColumn;
-        private ThemDoUongDataSetTableAdapters.DanhMucTableAdapter danhMucTableAdapter;
+      
         private System.Windows.Forms.BindingSource danhMucBindingSource;
     }
 }
