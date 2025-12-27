@@ -25,7 +25,7 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
 
         private void DSPhieuNhap_Load(object sender, EventArgs e)
         {
-            LoadDanhSachPhieu();
+            //LoadDanhSachPhieu();
         }
         private void LoadDanhSachPhieu()
         {

@@ -212,5 +212,10 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
         {
             this.Close();
         }
+
+        private void txtMaPhieu_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
