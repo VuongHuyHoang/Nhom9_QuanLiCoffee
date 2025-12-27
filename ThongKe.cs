@@ -21,5 +21,10 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
         {
 
         }
+
+        private void ThongKe_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
