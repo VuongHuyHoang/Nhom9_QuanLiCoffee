@@ -100,9 +100,9 @@
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.label1.Location = new System.Drawing.Point(57, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 18);
+            this.label1.Size = new System.Drawing.Size(115, 18);
             this.label1.TabIndex = 6;
-            this.label1.Text = "Nhập thông tin đồ uống";
+            this.label1.Text = "Nhập tên đồ uống";
             // 
             // pictureBox1
             // 

@@ -68,9 +68,22 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
+                if (dt.Rows.Count == 0)
+                {
+                    dataGridView1.DataSource = null;
+                    MessageBox.Show(
+                        "Vui lòng nhập lại!",
+                        "Không tìm thấy đồ uống",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning
+                    );
+                    return;
+                }
+
                 dataGridView1.DataSource = dt;
             }
         }
+
 
         private void button2_Click(object sender, EventArgs e)
         {
