@@ -197,6 +197,9 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
         {
             ActiveButton(sender);
             lbName.Text = btnQuanLyThucUong.Text;
+
+            ThemDoUongcs themDoUongcs = new ThemDoUongcs();
+            OpenChildForm(themDoUongcs);
         }
 
         private void btnQuanLyCaLam_Click(object sender, EventArgs e)

@@ -13,7 +13,7 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
 {
     public partial class ThemDoUongcs : Form
     {
-        string strKetNoi = @"Data Source=LAPTOP-JABGV6QA\SQLEXPRESS;Initial Catalog=QuanLyQuanCafe;Integrated Security=True";
+        string strKetNoi = @"Data Source=LAPTOP-QUBRA9KU\SQLEXPRESS;Initial Catalog=QuanLyQuanCafe;Integrated Security=True;TrustServerCertificate=True";
         string tenFileAnh = "default.png";
         SqlConnection sqlCon = null;
         SqlDataAdapter sqlAdt = null;
