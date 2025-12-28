@@ -96,5 +96,14 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
 
         }
 
+        private void Tracuu_Load_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
