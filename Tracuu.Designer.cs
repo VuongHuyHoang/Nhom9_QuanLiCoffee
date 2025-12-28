@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.danhMucBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyQuanCafeDataSet = new BaiTapLon_Nhom9_QuanLiCofffee.QuanLyQuanCafeDataSet();
             this.button2 = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,18 +47,17 @@
             this.doUongTableAdapter = new BaiTapLon_Nhom9_QuanLiCofffee.ThemDoUongDataSetTableAdapters.DoUongTableAdapter();
             this.fKDoUongDanhMucBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.fKDoUongDanhMucBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
-            this.quanLyQuanCafeDataSet = new BaiTapLon_Nhom9_QuanLiCofffee.QuanLyQuanCafeDataSet();
-            this.danhMucBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.danhMucTableAdapter1 = new BaiTapLon_Nhom9_QuanLiCofffee.QuanLyQuanCafeDataSetTableAdapters.DanhMucTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyQuanCafeDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.themDoUongDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDoUongDanhMucBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDoUongDanhMucBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDoUongDanhMucBindingSource2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyQuanCafeDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -94,6 +95,16 @@
             this.comboBox1.ValueMember = "MaDM";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
+            // danhMucBindingSource1
+            // 
+            this.danhMucBindingSource1.DataMember = "DanhMuc";
+            this.danhMucBindingSource1.DataSource = this.quanLyQuanCafeDataSet;
+            // 
+            // quanLyQuanCafeDataSet
+            // 
+            this.quanLyQuanCafeDataSet.DataSetName = "QuanLyQuanCafeDataSet";
+            this.quanLyQuanCafeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // button2
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -111,28 +122,28 @@
             // dataGridView1
             // 
             this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.DodgerBlue;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.DodgerBlue;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EnableHeadersVisualStyles = false;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 170);
+            this.dataGridView1.Location = new System.Drawing.Point(3, 166);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(1275, 312);
+            this.dataGridView1.Size = new System.Drawing.Size(1281, 463);
             this.dataGridView1.TabIndex = 4;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -165,6 +176,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
@@ -204,16 +216,6 @@
             this.fKDoUongDanhMucBindingSource2.DataMember = "FK_DoUong_DanhMuc";
             this.fKDoUongDanhMucBindingSource2.DataSource = this.danhMucBindingSource;
             // 
-            // quanLyQuanCafeDataSet
-            // 
-            this.quanLyQuanCafeDataSet.DataSetName = "QuanLyQuanCafeDataSet";
-            this.quanLyQuanCafeDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // danhMucBindingSource1
-            // 
-            this.danhMucBindingSource1.DataMember = "DanhMuc";
-            this.danhMucBindingSource1.DataSource = this.quanLyQuanCafeDataSet;
-            // 
             // danhMucTableAdapter1
             // 
             this.danhMucTableAdapter1.ClearBeforeFill = true;
@@ -224,23 +226,23 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(246)))), ((int)(((byte)(250)))));
             this.ClientSize = new System.Drawing.Size(1275, 482);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.Name = "Tracuu";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.Tracuu_Load_1);
+            ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyQuanCafeDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.themDoUongDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDoUongDanhMucBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDoUongDanhMucBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fKDoUongDanhMucBindingSource2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyQuanCafeDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.danhMucBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
