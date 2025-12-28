@@ -22,19 +22,25 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
 
         private void LoadDanhMuc()
         {
-            using (SqlConnection conn = new SqlConnection(connectionString))
+            string connStr = @"Data Source=.;Initial Catalog=QuanLyQuanCafe;Integrated Security=True";
+
+            using (SqlConnection conn = new SqlConnection(connStr))
             {
+                conn.Open();
                 string sql = "SELECT MaDM, TenDM FROM DanhMuc";
+
                 SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
                 comboBox1.DataSource = dt;
                 comboBox1.DisplayMember = "TenDM";
-                comboBox1.ValueMember = "MaDM";
-                comboBox1.SelectedIndex = -1;
+                comboBox1.ValueMember = "MaDM";   
+                comboBox1.SelectedIndex = -1;     
             }
         }
+
+
 
         private void LoadTatCaDoUong()
         {
@@ -111,10 +117,17 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
 
         private void Tracuu_Load_1(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'quanLyQuanCafeDataSet.DanhMuc' table. You can move, or remove it, as needed.
+            this.danhMucTableAdapter1.Fill(this.quanLyQuanCafeDataSet.DanhMuc);
 
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click_1(object sender, EventArgs e)
         {
 
         }

@@ -64,6 +64,11 @@
     <Compile Include="Quanlydouong.Designer.cs">
       <DependentUpon>Quanlydouong.cs</DependentUpon>
     </Compile>
+    <Compile Include="QuanLyQuanCafeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyQuanCafeDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Tracuu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -150,6 +155,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QuanLyQuanCafeDataSet.xsc">
+      <DependentUpon>QuanLyQuanCafeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyQuanCafeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyQuanCafeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyQuanCafeDataSet.xss">
+      <DependentUpon>QuanLyQuanCafeDataSet.xsd</DependentUpon>
+    </None>
     <None Include="ThemDoUongDataSet.xsc">
       <DependentUpon>ThemDoUongDataSet.xsd</DependentUpon>
     </None>
