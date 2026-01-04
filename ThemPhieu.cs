@@ -28,7 +28,7 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
 
         private void ThemPhieu_Load(object sender, EventArgs e)
         {
-            LoadDataToCombobox();
+            //LoadDataToCombobox();
             // Khởi tạo cột cho DataGridView nếu chưa tạo ở Design
             
         }
@@ -216,6 +216,17 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
         private void txtMaPhieu_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnDatLai_Click(object sender, EventArgs e)
+        {
+            txtDonGia.Clear();
+            nudSoLuong.Value = 0;
         }
     }
 }

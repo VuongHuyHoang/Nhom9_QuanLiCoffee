@@ -31,6 +31,8 @@
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.btnThemPhieu = new System.Windows.Forms.Button();
+            this.btnXoaPhieu = new System.Windows.Forms.Button();
+            this.btnSuaPhieu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,44 +41,67 @@
             this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSach.Dock = System.Windows.Forms.DockStyle.Top;
             this.dgvDanhSach.Location = new System.Drawing.Point(0, 0);
-            this.dgvDanhSach.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvDanhSach.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.dgvDanhSach.Name = "dgvDanhSach";
             this.dgvDanhSach.RowHeadersWidth = 51;
             this.dgvDanhSach.RowTemplate.Height = 24;
-            this.dgvDanhSach.Size = new System.Drawing.Size(662, 389);
+            this.dgvDanhSach.Size = new System.Drawing.Size(1214, 659);
             this.dgvDanhSach.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(24, 401);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(44, 679);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(115, 13);
+            this.label1.Size = new System.Drawing.Size(181, 22);
             this.label1.TabIndex = 1;
             this.label1.Text = "Danh sách phiếu nhập";
             // 
             // btnThemPhieu
             // 
-            this.btnThemPhieu.Location = new System.Drawing.Point(513, 392);
-            this.btnThemPhieu.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThemPhieu.Location = new System.Drawing.Point(939, 665);
+            this.btnThemPhieu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnThemPhieu.Name = "btnThemPhieu";
-            this.btnThemPhieu.Size = new System.Drawing.Size(99, 30);
+            this.btnThemPhieu.Size = new System.Drawing.Size(182, 51);
             this.btnThemPhieu.TabIndex = 2;
             this.btnThemPhieu.Text = "Thêm phiếu nhập";
             this.btnThemPhieu.UseVisualStyleBackColor = true;
             this.btnThemPhieu.Click += new System.EventHandler(this.btnThemPhieu_Click);
             // 
+            // btnXoaPhieu
+            // 
+            this.btnXoaPhieu.Location = new System.Drawing.Point(449, 665);
+            this.btnXoaPhieu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnXoaPhieu.Name = "btnXoaPhieu";
+            this.btnXoaPhieu.Size = new System.Drawing.Size(182, 51);
+            this.btnXoaPhieu.TabIndex = 3;
+            this.btnXoaPhieu.Text = "Xóa phiếu nhập";
+            this.btnXoaPhieu.UseVisualStyleBackColor = true;
+            // 
+            // btnSuaPhieu
+            // 
+            this.btnSuaPhieu.Location = new System.Drawing.Point(694, 665);
+            this.btnSuaPhieu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnSuaPhieu.Name = "btnSuaPhieu";
+            this.btnSuaPhieu.Size = new System.Drawing.Size(182, 51);
+            this.btnSuaPhieu.TabIndex = 4;
+            this.btnSuaPhieu.Text = "Sửa phiếu nhập";
+            this.btnSuaPhieu.UseVisualStyleBackColor = true;
+            // 
             // DSPhieuNhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(662, 432);
+            this.ClientSize = new System.Drawing.Size(1214, 732);
+            this.Controls.Add(this.btnSuaPhieu);
+            this.Controls.Add(this.btnXoaPhieu);
             this.Controls.Add(this.btnThemPhieu);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dgvDanhSach);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "DSPhieuNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "DSPhieuNhap";
@@ -92,5 +117,7 @@
         private System.Windows.Forms.DataGridView dgvDanhSach;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnThemPhieu;
+        private System.Windows.Forms.Button btnXoaPhieu;
+        private System.Windows.Forms.Button btnSuaPhieu;
     }
 }
