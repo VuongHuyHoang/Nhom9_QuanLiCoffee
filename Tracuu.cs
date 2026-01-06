@@ -46,7 +46,11 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string sql = "SELECT MaDoUong, TenDoUong, DonGia, TrangThai FROM DoUong";
+                string sql = @"
+        SELECT MaDoUong, TenDoUong, DonGia, TrangThai
+        FROM DoUong
+        ";
+
                 SqlDataAdapter da = new SqlDataAdapter(sql, conn);
                 DataTable dt = new DataTable();
                 da.Fill(dt);
@@ -55,20 +59,27 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
             }
         }
 
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             using (SqlConnection conn = new SqlConnection(connectionString))
             {
-                string sql = "SELECT MaDoUong, TenDoUong, DonGia, TrangThai FROM DoUong WHERE TenDoUong LIKE @Ten";
+                string sql = @"
+        SELECT MaDoUong, TenDoUong, DonGia, TrangThai
+        FROM DoUong
+        WHERE TenDoUong LIKE @Ten
+        ";
 
+                // Chỉ lọc danh mục nếu người dùng chọn
                 if (comboBox1.SelectedIndex != -1)
                     sql += " AND MaDM = @MaDM";
 
                 SqlCommand cmd = new SqlCommand(sql, conn);
-                cmd.Parameters.AddWithValue("@Ten", "%" + textBox1.Text + "%");
+                cmd.Parameters.AddWithValue("@Ten", "%" + textBox1.Text.Trim() + "%");
 
                 if (comboBox1.SelectedIndex != -1)
-                    cmd.Parameters.AddWithValue("@MaDM", comboBox1.SelectedValue.ToString());
+                    cmd.Parameters.AddWithValue("@MaDM", comboBox1.SelectedValue);
 
                 SqlDataAdapter da = new SqlDataAdapter(cmd);
                 DataTable dt = new DataTable();
@@ -78,10 +89,10 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
                 {
                     dataGridView1.DataSource = null;
                     MessageBox.Show(
-                        "Vui lòng nhập lại!",
-                        "Không tìm thấy đồ uống",
+                        "Không tìm thấy đồ uống phù hợp!",
+                        "Tra cứu",
                         MessageBoxButtons.OK,
-                        MessageBoxIcon.Warning
+                        MessageBoxIcon.Information
                     );
                     return;
                 }
@@ -91,12 +102,16 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
         }
 
 
+
         private void button2_Click(object sender, EventArgs e)
         {
             textBox1.Clear();
             comboBox1.SelectedIndex = -1;
+
             LoadTatCaDoUong();
         }
+
+
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
@@ -128,6 +143,11 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
