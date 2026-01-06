@@ -28,7 +28,7 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
 
         private void ThemPhieu_Load(object sender, EventArgs e)
         {
-            //LoadDataToCombobox();
+            LoadDataToCombobox();
             // Khởi tạo cột cho DataGridView nếu chưa tạo ở Design
             
         }

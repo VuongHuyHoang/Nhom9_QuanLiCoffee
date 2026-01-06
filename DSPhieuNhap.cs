@@ -14,7 +14,7 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
 {
     public partial class DSPhieuNhap : Form
     {
-        string connectionString = @"Data Source=LAPTOP-QUBRA9KU\SQLEXPRESS;Initial Catalog=QuanLyQuanCafe;Integrated Security=True;TrustServerCertificate=True";
+        string connectionString = @"Data Source=LAPTOP-QUBRA9KU\SQLEXPRESS;Initial Catalog=QuanLyQuanCafe;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
 
         public DSPhieuNhap()
         {
@@ -23,7 +23,7 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
 
         private void DSPhieuNhap_Load(object sender, EventArgs e)
         {
-            //LoadDanhSachPhieu();
+            LoadDanhSachPhieu();
         }
         private void LoadDanhSachPhieu()
         {
@@ -86,6 +86,11 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
                 // Sau khi Form thêm phiếu đóng lại và lưu thành công, load lại danh sách
                 LoadDanhSachPhieu();
             }
+        }
+
+        private void dgvDanhSach_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

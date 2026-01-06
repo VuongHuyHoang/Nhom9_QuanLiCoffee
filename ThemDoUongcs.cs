@@ -15,8 +15,7 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
     public partial class ThemDoUongcs : Form
     {
         // Chuỗi kết nối
-        string strKetNoi = @"Data Source=LAPTOP-JABGV6QA\SQLEXPRESS;Initial Catalog=QuanLyQuanCafe;Integrated Security=True;TrustServerCertificate=True";
-
+        string strKetNoi = @"Data Source=LAPTOP-QUBRA9KU\SQLEXPRESS;Initial Catalog=QuanLyQuanCafe;Integrated Security=True;TrustServerCertificate=True";
         // Biến lưu tên ảnh hiện tại (Mặc định là rỗng)
         string tenFileAnh = "";
 
