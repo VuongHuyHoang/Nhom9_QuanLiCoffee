@@ -96,7 +96,7 @@
             this.btnBaoCao.Image = ((System.Drawing.Image)(resources.GetObject("btnBaoCao.Image")));
             this.btnBaoCao.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBaoCao.Location = new System.Drawing.Point(-25, -11);
-            this.btnBaoCao.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBaoCao.Margin = new System.Windows.Forms.Padding(4);
             this.btnBaoCao.Name = "btnBaoCao";
             this.btnBaoCao.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnBaoCao.Size = new System.Drawing.Size(419, 78);
@@ -135,7 +135,7 @@
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(-25, -14);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.button1.Size = new System.Drawing.Size(419, 76);
@@ -163,7 +163,7 @@
             this.button3.Image = ((System.Drawing.Image)(resources.GetObject("button3.Image")));
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(-25, -11);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button3.Margin = new System.Windows.Forms.Padding(4);
             this.button3.Name = "button3";
             this.button3.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.button3.Size = new System.Drawing.Size(419, 75);
@@ -191,7 +191,7 @@
             this.TaiKhoan.Image = ((System.Drawing.Image)(resources.GetObject("TaiKhoan.Image")));
             this.TaiKhoan.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.TaiKhoan.Location = new System.Drawing.Point(-25, -11);
-            this.TaiKhoan.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.TaiKhoan.Margin = new System.Windows.Forms.Padding(4);
             this.TaiKhoan.Name = "TaiKhoan";
             this.TaiKhoan.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.TaiKhoan.Size = new System.Drawing.Size(419, 74);
@@ -317,7 +317,7 @@
             this.btnQuanLyDanhMuc.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLyDanhMuc.Image")));
             this.btnQuanLyDanhMuc.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuanLyDanhMuc.Location = new System.Drawing.Point(-25, -11);
-            this.btnQuanLyDanhMuc.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuanLyDanhMuc.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuanLyDanhMuc.Name = "btnQuanLyDanhMuc";
             this.btnQuanLyDanhMuc.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnQuanLyDanhMuc.Size = new System.Drawing.Size(419, 78);
@@ -346,7 +346,7 @@
             this.btnQuanLyThucUong.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLyThucUong.Image")));
             this.btnQuanLyThucUong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuanLyThucUong.Location = new System.Drawing.Point(-25, -11);
-            this.btnQuanLyThucUong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuanLyThucUong.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuanLyThucUong.Name = "btnQuanLyThucUong";
             this.btnQuanLyThucUong.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnQuanLyThucUong.Size = new System.Drawing.Size(419, 78);
@@ -375,7 +375,7 @@
             this.btnQuanLyCaLam.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLyCaLam.Image")));
             this.btnQuanLyCaLam.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuanLyCaLam.Location = new System.Drawing.Point(-25, -11);
-            this.btnQuanLyCaLam.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuanLyCaLam.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuanLyCaLam.Name = "btnQuanLyCaLam";
             this.btnQuanLyCaLam.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnQuanLyCaLam.Size = new System.Drawing.Size(419, 78);
@@ -404,7 +404,7 @@
             this.btnQuanLyHoaDon.Image = ((System.Drawing.Image)(resources.GetObject("btnQuanLyHoaDon.Image")));
             this.btnQuanLyHoaDon.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnQuanLyHoaDon.Location = new System.Drawing.Point(-25, -11);
-            this.btnQuanLyHoaDon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnQuanLyHoaDon.Margin = new System.Windows.Forms.Padding(4);
             this.btnQuanLyHoaDon.Name = "btnQuanLyHoaDon";
             this.btnQuanLyHoaDon.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnQuanLyHoaDon.Size = new System.Drawing.Size(419, 78);
@@ -433,7 +433,7 @@
             this.btnBangChamCong.Image = ((System.Drawing.Image)(resources.GetObject("btnBangChamCong.Image")));
             this.btnBangChamCong.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnBangChamCong.Location = new System.Drawing.Point(-25, -11);
-            this.btnBangChamCong.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnBangChamCong.Margin = new System.Windows.Forms.Padding(4);
             this.btnBangChamCong.Name = "btnBangChamCong";
             this.btnBangChamCong.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnBangChamCong.Size = new System.Drawing.Size(419, 78);
@@ -461,7 +461,7 @@
             this.btnLapPhieuNhap.Image = ((System.Drawing.Image)(resources.GetObject("btnLapPhieuNhap.Image")));
             this.btnLapPhieuNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnLapPhieuNhap.Location = new System.Drawing.Point(-25, -18);
-            this.btnLapPhieuNhap.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnLapPhieuNhap.Margin = new System.Windows.Forms.Padding(4);
             this.btnLapPhieuNhap.Name = "btnLapPhieuNhap";
             this.btnLapPhieuNhap.Padding = new System.Windows.Forms.Padding(40, 0, 0, 0);
             this.btnLapPhieuNhap.Size = new System.Drawing.Size(419, 82);
@@ -491,7 +491,7 @@
             this.Controls.Add(this.sdbMenu);
             this.Controls.Add(this.pnBody);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "ManHinhQuanLy";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ManHinhQuanLy";

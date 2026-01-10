@@ -64,7 +64,7 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
                                 );
 
                                 this.Hide();
-                                ManHinhQuanLy frm = new ManHinhQuanLy(maQL);
+                                ManHinhQuanLy frm = new ManHinhQuanLy(maQL,1);
                                 frm.Show();
                                 return; // THOÁT HÀM – không kiểm tra nhân viên nữa
                             }
@@ -96,8 +96,9 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
                                 );
 
                                 this.Hide();
-                              
-                                
+                                ManHinhQuanLy frm = new ManHinhQuanLy(maNV,2);
+                                frm.Show();
+
                                 return;
                             }
                         }

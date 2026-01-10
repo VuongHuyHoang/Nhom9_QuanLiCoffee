@@ -14,11 +14,7 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
     public partial class ThongKe : Form
     {
         private readonly string connStr =
-               @"Data Source=LAPTOP-F3O4C3L0\SQLVANHIEU;
-                  Initial Catalog=ThongKe;
-                  Integrated Security=True;
-                  Encrypt=False;
-                  TrustServerCertificate=True";
+                @"Data Source=LAPTOP-QUBRA9KU\SQLEXPRESS;Initial Catalog=QuanLyQuanCafe;Integrated Security=True;TrustServerCertificate=True";
         public ThongKe()
         {
             InitializeComponent();

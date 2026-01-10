@@ -55,7 +55,7 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
                     {
                         // "N0" phù hợp với DECIMAL(18,0) vì nó sẽ phân cách hàng nghìn và không lấy số lẻ
                         dgvDanhSach.Columns["Tổng Tiền"].DefaultCellStyle.Format = "N0";
-                        dgvDanhSach.Columns["Tổng Tiền"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+                        dgvDanhSach.Columns["Tổng Tiền"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
                     }
 
                     // Định dạng ngày tháng cho cột Ngày Nhập

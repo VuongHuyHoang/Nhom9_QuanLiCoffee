@@ -45,7 +45,7 @@
             this.dgvDanhSach.Name = "dgvDanhSach";
             this.dgvDanhSach.RowHeadersWidth = 51;
             this.dgvDanhSach.RowTemplate.Height = 24;
-            this.dgvDanhSach.Size = new System.Drawing.Size(1125, 286);
+            this.dgvDanhSach.Size = new System.Drawing.Size(981, 286);
             this.dgvDanhSach.TabIndex = 0;
             this.dgvDanhSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSach_CellContentClick);
             // 
@@ -61,7 +61,7 @@
             // 
             // btnThemPhieu
             // 
-            this.btnThemPhieu.Location = new System.Drawing.Point(917, 326);
+            this.btnThemPhieu.Location = new System.Drawing.Point(764, 326);
             this.btnThemPhieu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnThemPhieu.Name = "btnThemPhieu";
             this.btnThemPhieu.Size = new System.Drawing.Size(182, 51);
@@ -72,7 +72,7 @@
             // 
             // btnXoaPhieu
             // 
-            this.btnXoaPhieu.Location = new System.Drawing.Point(427, 326);
+            this.btnXoaPhieu.Location = new System.Drawing.Point(274, 326);
             this.btnXoaPhieu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnXoaPhieu.Name = "btnXoaPhieu";
             this.btnXoaPhieu.Size = new System.Drawing.Size(182, 51);
@@ -82,7 +82,7 @@
             // 
             // btnSuaPhieu
             // 
-            this.btnSuaPhieu.Location = new System.Drawing.Point(672, 326);
+            this.btnSuaPhieu.Location = new System.Drawing.Point(519, 326);
             this.btnSuaPhieu.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSuaPhieu.Name = "btnSuaPhieu";
             this.btnSuaPhieu.Size = new System.Drawing.Size(182, 51);
@@ -94,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1125, 424);
+            this.ClientSize = new System.Drawing.Size(981, 424);
             this.Controls.Add(this.btnSuaPhieu);
             this.Controls.Add(this.btnXoaPhieu);
             this.Controls.Add(this.btnThemPhieu);

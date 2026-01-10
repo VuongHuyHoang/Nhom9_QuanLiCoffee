@@ -16,15 +16,22 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
         private Random rd;
         private int tempIndex;
         private Form currentFormChild;
-        public ManHinhQuanLy(string MaNV)
+        private int phanquyen;
+
+        public ManHinhQuanLy(string MaNV,int maquyen)
         {
             InitializeComponent();
             rd = new Random();
+            phanquyen = maquyen;
         }
 
         private void ManHinhQuanLy_Load(object sender, EventArgs e)
         {
-
+            if(phanquyen==2)
+            {
+                pnBaocao.Visible = false;
+                pnLapPheuNhap.Visible = false;
+            }
         }
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -224,6 +231,9 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
         {
             ActiveButton(sender);
             lbName.Text = btnBaoCao.Text;
+
+            ThongKe thongkes = new ThongKe();
+            thongkes.Show();
         }
 
         private void button3_Click(object sender, EventArgs e)
