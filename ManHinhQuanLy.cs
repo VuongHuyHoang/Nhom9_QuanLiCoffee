@@ -12,13 +12,27 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
 {
     public partial class ManHinhQuanLy: Form
     {
+        ContextMenuStrip menu;
         private Button currentButton;
         private Random rd;
         private int tempIndex;
         private Form currentFormChild;
+
         public ManHinhQuanLy(string MaNV)
         {
             InitializeComponent();
+            menu = new ContextMenuStrip();
+
+            menu.Items.Add("Tra Cứu", null, (s, e) =>
+            {
+                OpenChildForm(new Tracuu());
+            });
+
+            menu.Items.Add("Lựa chọn B", null, (s, e) =>
+            {
+                MessageBox.Show("Bạn chọn B");
+            });
+
             rd = new Random();
         }
 
@@ -197,7 +211,8 @@ namespace BaiTapLon_Nhom9_QuanLiCofffee
         {
             ActiveButton(sender);
             lbName.Text = btnQuanLyThucUong.Text;
-            OpenChildForm(new Tracuu());
+            menu.Show(btnQuanLyThucUong, btnQuanLyThucUong.Width, 0);
+          
         }
 
         private void btnQuanLyCaLam_Click(object sender, EventArgs e)
